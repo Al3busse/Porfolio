@@ -15,4 +15,5 @@ code {
 @font-face {
   font-family: "Anite";
   src: local("Anite"), url("./fonts/Anite.ttf") format("truetype");
+  font-display: swap;
 }
