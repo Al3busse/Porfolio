@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../styles/particleBG.css";
 import Particles from "react-particles-js";
 
-var bg = require("../svg/bg.jpg");
+var bg = require("../svg/bg.webp");
 export class ParticleBGBH extends Component {
   render() {
     return (

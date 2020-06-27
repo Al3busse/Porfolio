@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import "../styles/navbar.css";
-import avatar from "../svg/avatar.png";
+import avatar from "../svg/avatar.webp";
 
 export default function NavBar() {
   function changeOF() {
