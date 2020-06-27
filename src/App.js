@@ -30,7 +30,7 @@ export default class App extends Component {
               <CSSTransition
                 classNames='spin'
                 key={location.key}
-                timeout={1500}
+                timeout={1501}
               >
                 <Switch location={location}>
                   <Route exact path='/Portfolio/' render={Home} />
