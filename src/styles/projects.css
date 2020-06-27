@@ -1,0 +1,18 @@
+#projects {
+  padding-top: 65px;
+}
+
+#title-projects {
+  margin-bottom: 2rem;
+  animation: shine 1s forwards, flicker 2s infinite;
+}
+
+.slide-title {
+  color: white;
+  background-color: black;
+}
+
+.slide-text {
+  color: white;
+  background-color: black;
+}

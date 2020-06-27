@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import NavBar from "./components/NavBar";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Container from "react-bootstrap/Container";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      language: "english",
+    };
+  }
+
+  render() {
+    return (
+      <Container id='App'>
+        <NavBar />
+        <Route
+          render={({ location }) => (
+            <TransitionGroup>
+              <CSSTransition
+                classNames='spin'
+                key={location.key}
+                timeout={1500}
+              >
+                <Switch location={location}>
+                  <Route exact path='/' render={Home} />
+                  <Route path='/skills' render={Skills} />
+                  <Route path='/projects' render={Projects} />
+                  <Route path='/contact' render={Contact} />
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+          )}
+        />
+      </Container>
+    );
+  }
 }
-
-export default App;

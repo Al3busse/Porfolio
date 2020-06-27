@@ -1,0 +1,56 @@
+#skills {
+  padding-top: 65px;
+}
+
+#title-skills {
+  margin-bottom: 1rem;
+  animation: shine 1s forwards, flicker 2s infinite;
+}
+
+$randomNumber1: random(5);
+$randomNumber2: random(5);
+$randomNumber3: random(5);
+.h3-skills-FE {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  animation: shine $randomNumber2 + s forwards,
+    flicker $randomNumber1 + s infinite;
+}
+.h3-skills-BE {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  animation: shine $randomNumber3 + s forwards,
+    flicker $randomNumber2 + s infinite;
+}
+.h3-skills-T {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  animation: shine $randomNumber1 + s forwards,
+    flicker $randomNumber3 + s infinite;
+}
+
+.responsive-img {
+  width: 100%;
+  max-width: 5rem;
+  height: auto;
+  padding-bottom: 5px;
+  display: block;
+  margin: auto;
+}
+
+.col {
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .p-skills {
+    font-size: 0.65rem;
+    font-weight: 1000;
+  }
+}
+.p-skills {
+  text-align: center;
+}
