@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import "../styles/navbar.css";
+import avatar from "../svg/avatar.png";
 
 export default function NavBar() {
   function changeOF() {
@@ -24,7 +25,7 @@ export default function NavBar() {
             id='avatar'
             style={{ borderRadius: "50%" }}
             alt=''
-            src='/avatar.png'
+            src={avatar}
             width='30'
             height='30'
             className='d-inline-block align-top'
