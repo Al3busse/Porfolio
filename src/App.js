@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
@@ -22,6 +22,7 @@ export default class App extends Component {
   render() {
     return (
       <Container id='App'>
+        <Redirect to='/' />
         <NavBar />
         <Route
           render={({ location }) => (
