@@ -22,7 +22,7 @@ export default class App extends Component {
   render() {
     return (
       <Container id='App'>
-        <Redirect to='/Portfolio/' from='/Porfolio' />
+        <Redirect to='/Portfolio/' />
         <NavBar />
         <Route
           render={({ location }) => (
