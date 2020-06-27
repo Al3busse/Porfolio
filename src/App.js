@@ -22,7 +22,7 @@ export default class App extends Component {
   render() {
     return (
       <Container id='App'>
-        <Redirect to='/' />
+        <Redirect to='/Portfolio/' />
         <NavBar />
         <Route
           render={({ location }) => (
@@ -33,10 +33,10 @@ export default class App extends Component {
                 timeout={1500}
               >
                 <Switch location={location}>
-                  <Route exact path='/' render={Home} />
-                  <Route path='/skills' render={Skills} />
-                  <Route path='/projects' render={Projects} />
-                  <Route path='/contact' render={Contact} />
+                  <Route exact path='/Portfolio/' render={Home} />
+                  <Route path='/Portfolio/skills' render={Skills} />
+                  <Route path='/Portfolio/projects' render={Projects} />
+                  <Route path='/Portfolio/contact' render={Contact} />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
