@@ -15,12 +15,7 @@ export default function NavBar() {
   return (
     <div>
       <Navbar collapseOnSelect expand='sm' variant='dark' fixed='top'>
-        <Navbar.Brand
-          id='avatar-name'
-          to='/Portfolio/'
-          as={Link}
-          href='/Portfolio/'
-        >
+        <Navbar.Brand id='avatar-name' to='/' as={Link} href='/'>
           <img
             id='avatar'
             style={{ borderRadius: "50%" }}
@@ -35,34 +30,24 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='ml-auto'>
-            <Nav.Link
-              as={Link}
-              to='/Portfolio/'
-              href='/Portfolio/'
-              onClick={changeOF}
-            >
+            <Nav.Link as={Link} to='/' href='/' onClick={changeOF}>
               Home
             </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to='/Portfolio/skills'
-              href='/Portfolio/skills'
-              onClick={changeOF}
-            >
+            <Nav.Link as={Link} to='/skills' href='/skills' onClick={changeOF}>
               Skills
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to='/Portfolio/projects'
-              href='/Portfolio/projects'
+              to='//projects'
+              href='/projects'
               onClick={changeOF}
             >
               Projects
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to='/Portfolio/contact'
-              href='/Portfolio/contact'
+              to='/contact'
+              href='/contact'
               onClick={changeOF}
             >
               Contact

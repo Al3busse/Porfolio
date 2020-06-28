@@ -32,10 +32,10 @@ export default class App extends Component {
                 timeout={1501}
               >
                 <Switch location={location}>
-                  <Route exact path='/Portfolio/' render={Home} />
-                  <Route path='/Portfolio/skills' render={Skills} />
-                  <Route path='/Portfolio/projects' render={Projects} />
-                  <Route path='/Portfolio/contact' render={Contact} />
+                  <Route exact path='/' render={Home} />
+                  <Route path='/skills' render={Skills} />
+                  <Route path='/projects' render={Projects} />
+                  <Route path='/contact' render={Contact} />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
