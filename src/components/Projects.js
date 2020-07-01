@@ -135,7 +135,7 @@ export default function Projects() {
       </Row>
       <Row className='justify-content-center'>
         {projects.map((item) => (
-          <Col xs='12' sm='6' md='6' lg='4'>
+          <Col xs='12' sm='6' md='6' lg='4' key={Math.random()}>
             <Card>
               <div className='image-box'>
                 <Card.Img
@@ -153,7 +153,7 @@ export default function Projects() {
 
               <Row className='justify-content-center'>
                 {item.tech_stack.map((tech) => (
-                  <Col xs='auto' className='text-center'>
+                  <Col xs='auto' className='text-center' key={Math.random()}>
                     <p
                       style={{
                         color: colorPick(tech),
