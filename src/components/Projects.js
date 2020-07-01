@@ -19,7 +19,7 @@ var projects = [
   {
     name: "Scatterplot Graph",
     description:
-      "A Scatterplot Graph made with D3js taking an API as the data for input and dynamically rendering.",
+      "A scatterplot graph made with D3js that dynamically renders data gathered with an API.",
     live_demo: "https://al3busse.github.io/d3js-Scatterplot-Graph/",
     code: "https://github.com/Al3busse/d3js-Scatterplot-Graph",
     tech_stack: ["D3.js", "Javascript", "API", "HTML", "CSS"],
@@ -27,7 +27,7 @@ var projects = [
   },
   {
     name: "Microservice: URL Shortener",
-    description: "A simple microservice to shorten url. REST API",
+    description: "A simple microservice for shortening urls.",
     live_demo: "https://al3busse-url-shortener.glitch.me/",
     code: "https://github.com/Al3busse/url-shortener-microservice",
     tech_stack: [
@@ -44,7 +44,7 @@ var projects = [
   {
     name: "Random Quote Machine",
     description:
-      "A random quote generator that let you share some amazing quotes on Twitter and WhatsApp.",
+      "A random quote generator that lets you share some amazing quotes on Twitter and WhatsApp.",
     live_demo: "https://al3busse.github.io/Random-Quote-Machine/",
     code: "https://github.com/Al3busse/Random-Quote-Machine",
     tech_stack: [
@@ -61,7 +61,7 @@ var projects = [
   {
     name: "Exercise Tracker REST API",
     description:
-      "A Rest API Microservice that let you track users and exercises based on dates.",
+      "A REST API microservice that lets you track users and exercises based on dates.",
     live_demo: "https://al3busse-exercise-tracker.glitch.me/",
     code: "https://github.com/Al3busse/exercise-tracker-microservice",
     tech_stack: [
@@ -77,7 +77,7 @@ var projects = [
   },
   {
     name: "Drum Machine",
-    description: "A simple drum soundboard with 2 sound bank.",
+    description: "A simple drum soundboard with 2 sound banks.",
     live_demo: "https://al3busse.github.io/Drum-Machine/",
     code: "https://github.com/Al3busse/Drum-Machine",
     tech_stack: ["React", "Bootstrap", "API", "Javascript", "HTML", "CSS"],
