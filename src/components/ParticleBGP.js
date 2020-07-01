@@ -75,7 +75,7 @@ export class ParticleBGBH extends Component {
                 enable: true,
                 trail: {
                   enable: true,
-                  length: 15,
+                  length: 10,
                 },
                 noise: {
                   delay: {
@@ -178,7 +178,7 @@ export class ParticleBGBH extends Component {
               life: {},
               rate: {
                 quantity: 2,
-                delay: 0.1,
+                delay: 0.8,
               },
               size: {
                 mode: "percent",

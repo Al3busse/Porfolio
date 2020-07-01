@@ -137,8 +137,8 @@ export class ParticleBGBH extends Component {
                   destroy: "min",
                   enable: true,
                   minimumValue: 0.1,
-                  speed: 0.8,
-                  startValue: 1,
+                  speed: 1,
+                  startValue: 1.5,
                   sync: true,
                 },
                 random: {
@@ -179,7 +179,7 @@ export class ParticleBGBH extends Component {
               direction: "center",
               life: {},
               rate: {
-                quantity: 2,
+                quantity: 3,
                 delay: 0.2,
               },
               size: {
