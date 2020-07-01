@@ -170,12 +170,20 @@ export default function Projects() {
 
               <Card.Body style={{ padding: "10px" }}>
                 <Row className='justify-content-center'>
-                  <Col sm='auto' style={{ padding: "5px" }}>
+                  <Col
+                    sm='auto'
+                    xs={{ span: 6, offset: 1 }}
+                    style={{ padding: "5px" }}
+                  >
                     <Card.Link href={item.live_demo} target='_blank'>
                       Live Demo
                     </Card.Link>
                   </Col>
-                  <Col sm='auto' style={{ padding: "5px" }}>
+                  <Col
+                    sm='auto'
+                    xs={{ span: 3, offset: 0 }}
+                    style={{ padding: "5px" }}
+                  >
                     <Card.Link href={item.code} target='_blank'>
                       Code
                     </Card.Link>
