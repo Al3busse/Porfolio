@@ -6,7 +6,7 @@ import "../styles/navbar.css";
 import avatar from "../svg/avatar.webp";
 
 export default function NavBar() {
-  function changeOF() {
+  function overflowShow() {
     document.body.style.overflowY = "auto";
   }
 
@@ -40,14 +40,19 @@ export default function NavBar() {
             <Nav.Link as={Link} to='/' href='/' onClick={overflowHide}>
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to='/skills' href='/skills' onClick={changeOF}>
+            <Nav.Link
+              as={Link}
+              to='/skills'
+              href='/skills'
+              onClick={overflowShow}
+            >
               Skills
             </Nav.Link>
             <Nav.Link
               as={Link}
               to='/projects'
               href='/projects'
-              onClick={overflowHide}
+              onClick={overflowShow}
             >
               Projects
             </Nav.Link>
@@ -62,7 +67,7 @@ export default function NavBar() {
             <Navbar.Text style={{ textAlign: "right", paddingRight: "5px" }}>
               <button
                 id='switchL'
-                title='Change language'
+                title='This feature is under development'
                 style={{
                   cursor: "pointer",
                   backgroundColor: "transparent",

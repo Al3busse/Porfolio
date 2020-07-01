@@ -1,14 +1,129 @@
 import React from "react";
 import ParticleBGP from "./ParticleBGP";
-import Carousel from "react-bootstrap/Carousel";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 import "../styles/projects.css";
 
-var encuesta = require("../svg/encuesta.png");
-var landing = require("../svg/landing-page.png");
-var tributo = require("../svg/tributo.png");
+var projects = [
+  {
+    name: "Pomodoro Clock",
+    description:
+      "A functional Pomodoro Timer to help improve your productivity.",
+    live_demo: "https://al3busse.github.io/Pomodoro-Clock/",
+    code: "https://github.com/Al3busse/Pomodoro-Clock",
+    tech_stack: ["React", "Bootstrap", "SASS", "Javascript", "HTML", "CSS"],
+    screenshot: require("../sc/pomodoro.webp"),
+  },
+  {
+    name: "Scatterplot Graph",
+    description:
+      "A Scatterplot Graph made with D3js taking an API as the data for input and dynamically rendering.",
+    live_demo: "https://al3busse.github.io/d3js-Scatterplot-Graph/",
+    code: "https://github.com/Al3busse/d3js-Scatterplot-Graph",
+    tech_stack: ["D3.js", "Javascript", "API", "HTML", "CSS"],
+    screenshot: require("../sc/scatter.webp"),
+  },
+  {
+    name: "Microservice: URL Shortener",
+    description: "A simple microservice to shorten url. REST API",
+    live_demo: "https://al3busse-url-shortener.glitch.me/",
+    code: "https://github.com/Al3busse/url-shortener-microservice",
+    tech_stack: [
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Mongoose",
+      "Javascript",
+      "HTML",
+      "CSS",
+    ],
+    screenshot: require("../sc/shorturl.webp"),
+  },
+  {
+    name: "Random Quote Machine",
+    description:
+      "A random quote generator that let you share some amazing quotes on Twitter and WhatsApp.",
+    live_demo: "https://al3busse.github.io/Random-Quote-Machine/",
+    code: "https://github.com/Al3busse/Random-Quote-Machine",
+    tech_stack: [
+      "React",
+      "Bootstrap",
+      "SASS",
+      "API",
+      "Javascript",
+      "HTML",
+      "CSS",
+    ],
+    screenshot: require("../sc/random.webp"),
+  },
+  {
+    name: "Exercise Tracker REST API",
+    description:
+      "A Rest API Microservice that let you track users and exercises based on dates.",
+    live_demo: "https://al3busse-exercise-tracker.glitch.me/",
+    code: "https://github.com/Al3busse/exercise-tracker-microservice",
+    tech_stack: [
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Mongoose",
+      "Javascript",
+      "HTML",
+      "CSS",
+    ],
+    screenshot: require("../sc/e-tracker.webp"),
+  },
+  {
+    name: "Drum Machine",
+    description: "A simple drum soundboard with 2 sound bank.",
+    live_demo: "https://al3busse.github.io/Drum-Machine/",
+    code: "https://github.com/Al3busse/Drum-Machine",
+    tech_stack: ["React", "Bootstrap", "API", "Javascript", "HTML", "CSS"],
+    screenshot: require("../sc/drum.webp"),
+  },
+];
+
+function colorPick(x) {
+  switch (x) {
+    case "HTML":
+      return "#E44D26";
+
+    case "CSS":
+      return "#1572B6";
+
+    case "SASS":
+      return "#CB6699";
+
+    case "D3.js":
+      return "#f7974e";
+
+    case "React":
+      return "#61DAFB";
+
+    case "Javascript":
+      return "#F0DB4F";
+
+    case "Bootstrap":
+      return "#5B4282";
+
+    case "Node.js":
+      return "#83CD29";
+
+    case "Express":
+      return "#fff";
+
+    case "MongoDB":
+      return "#439934";
+
+    case "Mongoose":
+      return "#880000";
+
+    default:
+      return "#fff";
+  }
+}
 
 export default function Projects() {
   return (
@@ -19,52 +134,57 @@ export default function Projects() {
         </Col>
       </Row>
       <Row className='justify-content-center'>
-        <Col sm='9' md='8'>
-          <Carousel>
-            <Carousel.Item>
-              <img
-                className='d-block w-100 cover'
-                src={encuesta}
-                alt='First slide'
-              />
-              <Carousel.Caption>
-                <h3 className='slide-title'>First slide label</h3>
-                <p className='slide-text'>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className='d-block w-100 cover'
-                src={tributo}
-                alt='Second Slide'
-              />
+        {projects.map((item) => (
+          <Col xs='12' sm='6' md='6' lg='4'>
+            <Card>
+              <div className='image-box'>
+                <Card.Img
+                  variant='top'
+                  src={item.screenshot}
+                  className='zoom'
+                />
+              </div>
+              <Card.Body>
+                <Card.Title style={{ textAlign: "center" }}>
+                  {item.name}
+                </Card.Title>
+                <Card.Text>{item.description}</Card.Text>
+              </Card.Body>
 
-              <Carousel.Caption>
-                <h3 className='slide-title'>Second slide label</h3>
-                <p className='slide-text'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className='d-block w-100 cover'
-                src={landing}
-                alt='Third slide'
-              />
+              <Row className='justify-content-center'>
+                {item.tech_stack.map((tech) => (
+                  <Col xs='auto' className='text-center'>
+                    <p
+                      style={{
+                        color: colorPick(tech),
+                        textShadow:
+                          "0px 0px 5px black,0px 0px 6px #666,1px 1px 1px" +
+                          colorPick(tech),
+                      }}
+                    >
+                      {tech}
+                    </p>
+                  </Col>
+                ))}
+              </Row>
 
-              <Carousel.Caption>
-                <h3 className='slide-title'>Third slide label</h3>
-                <p className='slide-text'>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
-        </Col>
+              <Card.Body style={{ padding: "10px" }}>
+                <Row className='justify-content-center'>
+                  <Col sm='auto' style={{ padding: "5px" }}>
+                    <Card.Link href={item.live_demo} target='_blank'>
+                      Live Demo
+                    </Card.Link>
+                  </Col>
+                  <Col sm='auto' style={{ padding: "5px" }}>
+                    <Card.Link href={item.code} target='_blank'>
+                      Code
+                    </Card.Link>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
       </Row>
       <ParticleBGP />
     </Container>

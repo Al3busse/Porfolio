@@ -19,23 +19,6 @@ body {
   font-weight: 10px;
 }
 
-.aenter,
-.aa-enter.active {
-  -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-animation: rotateInNewspaper 1.5s both ease-out;
-  animation: rotateInNewspaper 1.5s both ease-out;
-  overflow: hidden;
-}
-
-.a-exit {
-  -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-animation: rotateOutNewspaper 1.2s both ease-in;
-  animation: rotateOutNewspaper 1.2s both ease-in;
-  overflow: hidden;
-}
-
 .animation-exit {
   -webkit-animation: moveToLeft 1.1s ease both;
   animation: moveToLeft 1.1s ease both;
@@ -101,55 +84,5 @@ body {
     -webkit-transform: perspective(500px) translate3d(0%, -75%, -535px);
     transform: perspective(500px) translate3d(0%, -75%, -535px);
     opacity: 0;
-  }
-}
-
-@-webkit-keyframes rotateOutNewspaper {
-  from {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  to {
-    -webkit-transform: perspective(500px) translate3d(20%, -20%, -335px);
-    opacity: 0;
-    top: 0;
-    left: 0;
-    position: absolute;
-  }
-}
-@keyframes rotateOutNewspaper {
-  from {
-    top: 0;
-    left: 0;
-    position: absolute;
-  }
-  to {
-    -webkit-transform: perspective(500px) translate3d(20%, -20%, -335px);
-    transform: perspective(500px) translate3d(20%, -20%, -335px);
-    opacity: 0;
-    top: 0;
-    left: 0;
-    position: absolute;
-  }
-}
-
-@-webkit-keyframes rotateInNewspaper {
-  from {
-    -webkit-transform: perspective(500px) translate3d(20%, -20%, -335px);
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-@keyframes rotateInNewspaper {
-  from {
-    -webkit-transform: perspective(500px) translate3d(20%, -20%, -335px);
-    transform: perspective(500px) translate3d(20%, -20%, -335px);
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 }
