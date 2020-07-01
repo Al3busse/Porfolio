@@ -1,11 +1,13 @@
 .navbar {
   background: linear-gradient(
-    to top,
-    #5e5977 0%,
-    #222222 5%,
-    #000000 50%,
-    #222222 95%,
-    #5e5977 100%
+    to left,
+    #000000 0%,
+    #000724 25%,
+    #1b339620 40%,
+    #2e58ff10 55%,
+    #1b339620 70%,
+    #000724 80%,
+    #000000 100%
   );
 }
 
@@ -25,5 +27,10 @@
     0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
   transform: scale(1.2);
 
-  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-link {
+  text-align: right;
+  margin-right: 5px;
 }

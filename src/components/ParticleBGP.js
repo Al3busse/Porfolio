@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "../styles/particleBG.css";
+import Container from "react-bootstrap/Container";
 import Particles from "react-particles-js";
 
 /*var bg = require("../svg/bg5.jpg"); */
 export class ParticleBGBH extends Component {
   render() {
     return (
-      <div>
+      <Container fluid>
         <Particles
           id='particleBG'
           params={{
@@ -16,13 +17,32 @@ export class ParticleBGBH extends Component {
               position: "50% 50%",
               repeat: "no-repeat",
               size: "cover",
-              width: "100%",
-              height: "100%",
             },
 
             detectRetina: true,
             fpsLimit: 60,
+            interactivity: {
+              detectsOn: "window",
+              events: {
+                onHover: {
+                  enable: true,
+                  mode: ["slow"],
+                  parallax: {
+                    enable: false,
+                    force: 555,
+                    smooth: 10,
+                  },
+                },
+                resize: true,
+              },
 
+              modes: {
+                slow: {
+                  factor: 3,
+                  radius: 70,
+                },
+              },
+            },
             particles: {
               collisions: {
                 enable: false,
@@ -40,6 +60,7 @@ export class ParticleBGBH extends Component {
                 enable: false,
               },
               move: {
+                speed: 3,
                 attract: {
                   enable: false,
                   rotate: {
@@ -54,7 +75,7 @@ export class ParticleBGBH extends Component {
                 enable: true,
                 trail: {
                   enable: true,
-                  length: 25,
+                  length: 15,
                 },
                 noise: {
                   delay: {
@@ -133,14 +154,14 @@ export class ParticleBGBH extends Component {
                   enable: true,
                   minimumValue: 0.3,
                   speed: 3,
-                  startValue: 10,
+                  startValue: 15,
                   sync: true,
                 },
                 random: {
                   enable: true,
-                  minimumValue: 17,
+                  minimumValue: 10,
                 },
-                value: 10,
+                value: 15,
               },
               stroke: {
                 color: {
@@ -171,7 +192,7 @@ export class ParticleBGBH extends Component {
             },
           }}
         />
-      </div>
+      </Container>
     );
   }
 }

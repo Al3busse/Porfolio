@@ -7,15 +7,22 @@ import avatar from "../svg/avatar.webp";
 
 export default function NavBar() {
   function changeOF() {
+    document.body.style.overflowY = "auto";
+  }
+
+  function overflowHide() {
     document.body.style.overflowY = "hidden";
-    setTimeout(function () {
-      document.body.style.overflowY = "auto";
-    }, 1500);
   }
   return (
     <div>
       <Navbar collapseOnSelect expand='sm' variant='dark' fixed='top'>
-        <Navbar.Brand id='avatar-name' to='/' as={Link} href='/'>
+        <Navbar.Brand
+          id='avatar-name'
+          to='/'
+          as={Link}
+          href='/'
+          onClick={overflowHide}
+        >
           <img
             id='avatar'
             style={{ borderRadius: "50%" }}
@@ -30,7 +37,7 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='ml-auto'>
-            <Nav.Link as={Link} to='/' href='/' onClick={changeOF}>
+            <Nav.Link as={Link} to='/' href='/' onClick={overflowHide}>
               Home
             </Nav.Link>
             <Nav.Link as={Link} to='/skills' href='/skills' onClick={changeOF}>
@@ -40,7 +47,7 @@ export default function NavBar() {
               as={Link}
               to='/projects'
               href='/projects'
-              onClick={changeOF}
+              onClick={overflowHide}
             >
               Projects
             </Nav.Link>
@@ -48,12 +55,13 @@ export default function NavBar() {
               as={Link}
               to='/contact'
               href='/contact'
-              onClick={changeOF}
+              onClick={overflowHide}
             >
               Contact
             </Nav.Link>
-            <Navbar.Text>
+            <Navbar.Text style={{ textAlign: "right", paddingRight: "5px" }}>
               <button
+                id='switchL'
                 title='Change language'
                 style={{
                   cursor: "pointer",

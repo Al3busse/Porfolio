@@ -27,9 +27,9 @@ export default class App extends Component {
           render={({ location }) => (
             <TransitionGroup>
               <CSSTransition
-                classNames='spin'
+                classNames='animation'
                 key={location.key}
-                timeout={1501}
+                timeout={{ enter: 1200, exit: 1200 }}
               >
                 <Switch location={location}>
                   <Route exact path='/' render={Home} />

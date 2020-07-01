@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import "../styles/particleBG.css";
+import Container from "react-bootstrap/Container";
 import Particles from "react-particles-js";
 
 var bg = require("../svg/bg.webp");
 export class ParticleBGBH extends Component {
   render() {
     return (
-      <div>
+      <Container fluid>
         <Particles
           id='particleBG'
           params={{
             background: {
               image: "url(" + bg + ")",
-              position: "50% 50%",
+              position: "50% 25%",
               repeat: "no-repeat",
               size: "cover",
             },
@@ -21,13 +22,13 @@ export class ParticleBGBH extends Component {
             fpsLimit: 30,
 
             interactivity: {
-              detectsOn: "canvas",
+              detectsOn: "window",
               events: {
                 onHover: {
                   enable: true,
-                  mode: "slow",
+                  mode: "",
                   parallax: {
-                    enable: true,
+                    enable: false,
                     force: 5,
                     smooth: 10,
                   },
@@ -44,7 +45,7 @@ export class ParticleBGBH extends Component {
             },
             particles: {
               collisions: {
-                enable: true,
+                enable: false,
                 mode: "bounce",
               },
               color: {
@@ -59,6 +60,8 @@ export class ParticleBGBH extends Component {
                 enable: false,
               },
               move: {
+                speed: 3,
+                outMode: "out",
                 attract: {
                   enable: false,
                   rotate: {
@@ -134,12 +137,12 @@ export class ParticleBGBH extends Component {
                   destroy: "min",
                   enable: true,
                   minimumValue: 0.1,
-                  speed: 0.3,
+                  speed: 0.8,
                   startValue: 1,
                   sync: true,
                 },
                 random: {
-                  enable: true,
+                  enable: false,
                   minimumValue: 0.1,
                 },
                 value: 1,
@@ -159,17 +162,17 @@ export class ParticleBGBH extends Component {
               },
               opacity: 0,
               size: {
-                density: 50,
+                density: 700,
                 random: {
                   enable: false,
                   minimumValue: 35,
                 },
-                value: 25,
-                limit: 75,
+                value: 55,
+                limit: 55,
               },
               position: {
-                x: 58.5,
-                y: 45.5,
+                x: 48,
+                y: 22,
               },
             },
             emitters: {
@@ -181,7 +184,7 @@ export class ParticleBGBH extends Component {
               },
               size: {
                 mode: "percent",
-                height: 0,
+                height: 100,
                 width: 100,
               },
               position: {
@@ -190,8 +193,8 @@ export class ParticleBGBH extends Component {
               },
             },
           }}
-        ></Particles>
-      </div>
+        />
+      </Container>
     );
   }
 }

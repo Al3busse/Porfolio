@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 export default function Home() {
   return (
     <Container id='home' fluid>
-      <Row className='home-margin justify-content-md-center'>
+      <Row className='home-margin justify-content-center'>
         <Col className='text-left' sm='6'>
           <h1 id='home-title'>
             Hi! I'm <span className='span-home1'>Alejandro</span>
