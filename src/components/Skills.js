@@ -32,7 +32,7 @@ export default function Skills() {
 
       <Row className='justify-content-center'>
         <Col>
-          <h3 className='h3-skills h3-skills-FE'>Front-End</h3>
+          <h3 className='h3-skills'>Front-End</h3>
         </Col>
       </Row>
       <Row className='justify-content-center'>
@@ -69,7 +69,7 @@ export default function Skills() {
 
       <Row className='justify-content-center'>
         <Col>
-          <h3 className='h3-skills h3-skills-BE'>Back-End</h3>
+          <h3 className='h3-skills'>Back-End</h3>
           <Row className='justify-content-center'>
             <Col xs='3' sm='auto'>
               <img src={nodejs} alt='react' className='responsive-img' />
@@ -94,7 +94,7 @@ export default function Skills() {
         <Col>
           <Row className='justify-content-center'>
             <Col>
-              <h3 className='h3-skills h3-skills-T'>Tools</h3>
+              <h3 className='h3-skills'>Tools</h3>
             </Col>
           </Row>
           <Row className='justify-content-center'>

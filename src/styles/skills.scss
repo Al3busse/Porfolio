@@ -3,33 +3,9 @@
 }
 
 #title-skills {
+  mix-blend-mode: difference !important;
+  color: white;
   margin-bottom: 1rem;
-  animation: shine 1s forwards, flicker 2s infinite;
-}
-
-$randomNumber1: random(5);
-$randomNumber2: random(5);
-$randomNumber3: random(5);
-.h3-skills-FE {
-  font-size: 1.5rem;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  animation: shine $randomNumber2 + s forwards,
-    flicker $randomNumber1 + s infinite;
-}
-.h3-skills-BE {
-  font-size: 1.5rem;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  animation: shine $randomNumber3 + s forwards,
-    flicker $randomNumber2 + s infinite;
-}
-.h3-skills-T {
-  font-size: 1.5rem;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  animation: shine $randomNumber1 + s forwards,
-    flicker $randomNumber3 + s infinite;
 }
 
 .responsive-img {

@@ -5,7 +5,8 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
-import Skills from "./components/Skills.js";
+import Skills from "./components/Skills";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Container from "react-bootstrap/Container";
@@ -23,6 +24,7 @@ export default class App extends Component {
     return (
       <Container id='App'>
         <NavBar />
+
         <Route
           render={({ location }) => (
             <TransitionGroup>

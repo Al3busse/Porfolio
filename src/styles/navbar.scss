@@ -1,0 +1,37 @@
+#main-navbar {
+  padding: 0px !important;
+  background: linear-gradient(to bottom, #28182a 95%, #5c9506 100%);
+}
+
+@media (max-width: 450px) {
+  #avatar-name {
+    font-size: 1.15rem;
+  }
+}
+#avatar {
+  box-shadow: 0 0 5px #111, 0 0 7px #9dcb2c;
+}
+
+.navbar-brand {
+  color: #d7d3c8 !important;
+}
+
+.nav-link:hover,
+.nav-link.active,
+.nav-link:active {
+  background-color: #5d3666;
+  width: 100%;
+  color: #9dcb2c !important;
+  margin-left: auto;
+}
+
+.nav-link {
+  text-align: right;
+  padding-right: 8px !important;
+  color: #d7d3c8 !important;
+}
+
+#avatar {
+  margin-left: 8px;
+  margin-right: 5px;
+}

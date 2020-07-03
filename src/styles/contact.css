@@ -1,11 +1,9 @@
 #contact {
-  padding-top: 10%;
+  margin-top: 5rem;
 }
 
 #contact-title {
   font-size: 2rem;
-  margin-top: 1.5rem;
-  animation: shine 1s forwards, flicker 2s infinite;
 }
 
 #contact-text {

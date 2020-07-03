@@ -5,6 +5,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import "../styles/projects.css";
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
 
 var projects = [
   {
@@ -112,7 +114,7 @@ function colorPick(x) {
       return "#83CD29";
 
     case "Express":
-      return "#fff";
+      return "#111";
 
     case "MongoDB":
       return "#439934";
@@ -121,7 +123,7 @@ function colorPick(x) {
       return "#880000";
 
     default:
-      return "#fff";
+      return "#111";
   }
 }
 
@@ -151,15 +153,16 @@ export default function Projects() {
                 <Card.Text>{item.description}</Card.Text>
               </Card.Body>
 
-              <Row className='justify-content-center'>
+              <Row
+                className='justify-content-center'
+                style={{ marginLeft: "3px", marginRight: "3px" }}
+              >
                 {item.tech_stack.map((tech) => (
                   <Col xs='auto' className='text-center' key={Math.random()}>
                     <p
                       style={{
                         color: colorPick(tech),
-                        textShadow:
-                          "0px 0px 5px black,0px 0px 6px #666,1px 1px 1px" +
-                          colorPick(tech),
+                        textShadow: "1px 1px 1px black,3px 3px 5px #111",
                       }}
                     >
                       {tech}
@@ -170,23 +173,15 @@ export default function Projects() {
 
               <Card.Body style={{ padding: "10px" }}>
                 <Row className='justify-content-center'>
-                  <Col
-                    sm='auto'
-                    xs={{ span: 6, offset: 1 }}
-                    style={{ padding: "5px" }}
-                  >
-                    <Card.Link href={item.live_demo} target='_blank'>
+                  <Col sm='auto' xs={{ span: 6 }} style={{ padding: "5px" }}>
+                    <AwesomeButton href={item.live_demo} target='_blank'>
                       Live Demo
-                    </Card.Link>
+                    </AwesomeButton>
                   </Col>
-                  <Col
-                    sm='auto'
-                    xs={{ span: 3, offset: 0 }}
-                    style={{ padding: "5px" }}
-                  >
-                    <Card.Link href={item.code} target='_blank'>
+                  <Col sm='auto' xs={{ span: 3 }} style={{ padding: "5px" }}>
+                    <AwesomeButton href={item.code} target='_blank'>
                       Code
-                    </Card.Link>
+                    </AwesomeButton>
                   </Col>
                 </Row>
               </Card.Body>

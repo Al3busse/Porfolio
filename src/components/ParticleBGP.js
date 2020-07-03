@@ -140,10 +140,10 @@ export class ParticleBGBH extends Component {
                   char: {
                     fill: true,
                     close: true,
-                    font: "Anite",
+                    font: "Metrophobic",
                     style: "",
-                    value: ["*"],
-                    weight: "400",
+                    value: ["\\|/"],
+                    weight: "1000",
                   },
                 },
                 type: "char",

@@ -17,39 +17,97 @@ export class ParticleBGBH extends Component {
               repeat: "no-repeat",
               size: "cover",
             },
+            backgroundMask: {
+              cover: {
+                color: {
+                  value: "#D7D3C8",
+                },
+                opacity: 1,
+              },
+              enable: true,
+            },
 
             detectRetina: true,
             fpsLimit: 30,
-
+            infection: {
+              cure: false,
+              delay: 0,
+              enable: false,
+              infections: 0,
+              stages: [],
+            },
             interactivity: {
               detectsOn: "window",
               events: {
+                onDiv: [
+                  {
+                    elementId: "repulsor",
+                    enable: true,
+                    mode: "repulse",
+                    type: "circle",
+                  },
+                  {
+                    elementId: "cta",
+                    enable: false,
+                    mode: "repulse",
+                    type: "circle",
+                  },
+                ],
                 onHover: {
                   enable: true,
-                  mode: "",
+                  mode: "bubble",
                   parallax: {
                     enable: false,
-                    force: 5,
+                    force: 60,
                     smooth: 10,
                   },
                 },
                 resize: true,
               },
-
               modes: {
+                bubble: {
+                  distance: 200,
+                  duration: 2,
+                  opacity: 1,
+                  size: 35,
+                },
+                connect: {
+                  distance: 80,
+                  links: {
+                    opacity: 0.5,
+                  },
+                  radius: 60,
+                },
+                grab: {
+                  distance: 400,
+                  links: {
+                    opacity: 1,
+                  },
+                },
+                push: {
+                  quantity: 4,
+                },
+                remove: {
+                  quantity: 2,
+                },
+                repulse: {
+                  distance: 100,
+                  duration: 5,
+                  speed: 0.5,
+                },
                 slow: {
                   factor: 3,
-                  radius: 120,
+                  radius: 200,
                 },
               },
             },
             particles: {
               collisions: {
-                enable: false,
+                enable: true,
                 mode: "bounce",
               },
               color: {
-                value: "#fff",
+                value: "#ffffff",
                 animation: {
                   enable: false,
                   speed: 1,
@@ -57,11 +115,28 @@ export class ParticleBGBH extends Component {
                 },
               },
               links: {
-                enable: false,
+                blink: false,
+                color: {
+                  value: "#ffffff",
+                },
+                consent: false,
+                distance: 130,
+                enable: true,
+                opacity: 1,
+                shadow: {
+                  blur: 5,
+                  color: {
+                    value: "lime",
+                  },
+                  enable: false,
+                },
+                triangles: {
+                  enable: false,
+                },
+                width: 3,
+                warp: false,
               },
               move: {
-                speed: 3,
-                outMode: "out",
                 attract: {
                   enable: false,
                   rotate: {
@@ -69,7 +144,7 @@ export class ParticleBGBH extends Component {
                     y: 1200,
                   },
                 },
-                direction: "top",
+                direction: "top-left",
                 enable: true,
                 noise: {
                   delay: {
@@ -91,22 +166,41 @@ export class ParticleBGBH extends Component {
                     },
                   },
                 },
+                outMode: "out",
+                random: false,
+                speed: 3,
+                straight: false,
+                trail: {
+                  enable: false,
+                  length: 10,
+                  fillColor: {
+                    value: "#000000",
+                  },
+                },
+                vibrate: false,
+                warp: false,
               },
               number: {
-                value: 0,
+                density: {
+                  enable: true,
+                  area: 800,
+                  factor: 1000,
+                },
+                limit: 0,
+                value: 80,
               },
               opacity: {
                 animation: {
                   enable: false,
-                  minimumValue: 0.5,
+                  minimumValue: 0.1,
                   speed: 1,
                   sync: false,
                 },
                 random: {
                   enable: false,
-                  minimumValue: 0.5,
+                  minimumValue: 1,
                 },
-                value: 5,
+                value: 1,
               },
               rotate: {
                 animation: {
@@ -119,79 +213,67 @@ export class ParticleBGBH extends Component {
                 value: 0,
               },
               shadow: {
-                blur: 3,
+                blur: 0,
                 color: {
-                  value: "#fff",
+                  value: "#000000",
                 },
-                enable: true,
+                enable: false,
                 offset: {
                   x: 0,
                   y: 0,
                 },
               },
               shape: {
+                options: {
+                  polygon: {
+                    fill: true,
+                    close: true,
+                    sides: 5,
+                  },
+                  star: {
+                    fill: true,
+                    close: true,
+                    sides: 5,
+                  },
+                },
                 type: "circle",
               },
               size: {
                 animation: {
-                  destroy: "min",
+                  destroy: "none",
                   enable: true,
-                  minimumValue: 0.1,
-                  speed: 1,
-                  startValue: 1.5,
-                  sync: true,
+                  minimumValue: 1,
+                  speed: 25,
+                  startValue: "max",
+                  sync: false,
                 },
                 random: {
-                  enable: false,
-                  minimumValue: 0.1,
+                  enable: true,
+                  minimumValue: 5,
                 },
-                value: 1,
+                value: 10,
               },
               stroke: {
                 color: {
-                  value: "#fff",
+                  value: "#000000",
                 },
-                width: 2,
+                width: 0,
                 opacity: 1,
+              },
+              twinkle: {
+                lines: {
+                  enable: false,
+                  frequency: 0.05,
+                  opacity: 1,
+                },
+                particles: {
+                  enable: false,
+                  frequency: 0.05,
+                  opacity: 1,
+                },
               },
             },
             pauseOnBlur: true,
-            absorbers: {
-              color: {
-                value: "#fff",
-              },
-              opacity: 0,
-              size: {
-                density: 700,
-                random: {
-                  enable: false,
-                  minimumValue: 35,
-                },
-                value: 55,
-                limit: 55,
-              },
-              position: {
-                x: 48,
-                y: 22,
-              },
-            },
-            emitters: {
-              direction: "center",
-              life: {},
-              rate: {
-                quantity: 3,
-                delay: 0.2,
-              },
-              size: {
-                mode: "percent",
-                height: 100,
-                width: 100,
-              },
-              position: {
-                x: 50,
-                y: 100,
-              },
-            },
           }}
         />
       </Container>

@@ -7,7 +7,11 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
+
+import "../styles/myform.css";
 
 export default class MyForm extends React.Component {
   constructor(props) {
@@ -66,14 +70,19 @@ export default class MyForm extends React.Component {
               </Form.Group>
             </Col>
           </Row>
+
           <Row className='justify-content-center'>
             <Col className='text-right ' xl='6'>
               {status === "SUCCESS" ? (
                 <p>Thanks!</p>
               ) : (
-                <Button className='button-all' variant='dark' type='submit'>
+                <AwesomeButton
+                  className='button-all'
+                  id='submit-button'
+                  type='primary'
+                >
                   Submit
-                </Button>
+                </AwesomeButton>
               )}
               {status === "ERROR" && <p>Ooops! There was an error.</p>}
             </Col>
