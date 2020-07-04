@@ -1,9 +1,7 @@
-#social-nav {
-  background: linear-gradient(to top, #28182a 95%, #5c9506 100%);
-  position: fixed;
-  left: 0;
-  bottom: 0;
+.icon-svg {
+  width: auto;
+  height: 2.2rem;
 
-  color: white;
-  text-align: center;
+  display: block;
+  margin: auto;
 }

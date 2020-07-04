@@ -65,7 +65,7 @@ export default function NavBar() {
             as={Link}
             to='/contact'
             href='/contact'
-            onClick={overflowHide}
+            onClick={overflowShow}
           >
             Contact
           </Nav.Link>

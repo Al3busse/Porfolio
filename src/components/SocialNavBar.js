@@ -1,21 +1,46 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { AwesomeButton } from "react-awesome-button";
+import { AwesomeButtonSocial } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
+import Navbar from "react-bootstrap/Navbar";
+import CV from "../cv/Alejandro Busse - EN.pdf";
+
 import "../styles/socialnavbar.css";
 
 export default function SocialNavBar() {
   return (
-    <Container id='social-nav'>
-      <Row>
-        <Col xs='auto'>
-          <AwesomeButton>a</AwesomeButton>
-          <AwesomeButton>a</AwesomeButton>
-          <AwesomeButton>a</AwesomeButton>
-          <AwesomeButton>a</AwesomeButton>
-        </Col>
-      </Row>
-    </Container>
+    <Navbar fixed='bottom'>
+      <AwesomeButtonSocial
+        type='github'
+        size='icon'
+        target='_blank'
+        href='http://www.linkedin.com/in/al3busse'
+      ></AwesomeButtonSocial>
+      <AwesomeButtonSocial
+        type='linkedin'
+        size='icon'
+        target='_blank'
+        href='http://www.github.com/Al3busse'
+      ></AwesomeButtonSocial>
+      <AwesomeButton size='icon' href='mailto:al3busse@gmail.com'>
+        <img
+          className='icon-svg'
+          src={require("../svg/mail.svg")}
+          alt='send mail'
+        ></img>
+      </AwesomeButton>
+      <AwesomeButton
+        size='icon'
+        target='_blank'
+        href={CV}
+        download='Alejandro Busse - EN.pdf'
+      >
+        <img
+          className='icon-svg icon-cv'
+          src={require("../svg/cv.svg")}
+          alt='download cv'
+        ></img>
+      </AwesomeButton>
+    </Navbar>
   );
 }

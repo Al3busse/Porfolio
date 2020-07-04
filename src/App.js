@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import NavBar from "./components/NavBar";
-
+import SocialNavBar from "./components/SocialNavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Container from "react-bootstrap/Container";
@@ -37,6 +37,7 @@ export default class App extends Component {
       <Container id='App'>
         <React.Suspense fallback={<h2 className='loader'>Loading</h2>}>
           <NavBar />
+          <SocialNavBar />
           <Route
             render={({ location }) => (
               <TransitionGroup>
