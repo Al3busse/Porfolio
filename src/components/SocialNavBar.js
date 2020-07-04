@@ -11,13 +11,13 @@ export default function SocialNavBar() {
   return (
     <Navbar fixed='bottom'>
       <AwesomeButtonSocial
-        type='github'
+        type='linkedin'
         size='icon'
         target='_blank'
-        href='http://www.linkedin.com/in/al3busse'
+        href=''
       ></AwesomeButtonSocial>
       <AwesomeButtonSocial
-        type='linkedin'
+        type='github'
         size='icon'
         target='_blank'
         href='http://www.github.com/Al3busse'
