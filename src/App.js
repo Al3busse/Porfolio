@@ -19,15 +19,23 @@ export default class App extends Component {
 
     this.state = {
       language: "english",
+      isLoading: true,
     };
   }
 
+  componentDidMount() {
+    // this simulates an async action, after which the component will render the content
+    demoAsyncCall().then(() => this.setState({ isLoading: false }));
+  }
+
   render() {
+    if (this.state.isLoading) {
+      // if your component doesn't have to wait for an async action, remove this block
+      return <h2 className='loader'>Loading</h2>; // render null when app is not ready
+    }
     return (
       <Container id='App'>
-        <React.Suspense
-          fallback={<h1 style={{ marginTop: "10rem" }}>Loading...</h1>}
-        >
+        <React.Suspense fallback={<h2 className='loader'>Loading</h2>}>
           <NavBar />
           <Route
             render={({ location }) => (
@@ -54,4 +62,8 @@ export default class App extends Component {
       </Container>
     );
   }
+}
+
+function demoAsyncCall() {
+  return new Promise((resolve) => setTimeout(() => resolve(), 2500));
 }
