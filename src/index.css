@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.aws-btn {
+  --button-default-height: 48px;
+  --button-default-font-size: 16px;
+  --button-default-border-radius: 6px;
+  --button-horizontal-padding: 20px;
+  --button-raise-level: 1px !important;
+  --button-hover-pressure: 2;
+  --transform-speed: 0.2s;
+  --button-primary-color: #28182a;
+  --button-primary-color-dark: #5c9506;
+  --button-primary-color-light: #d7d3c8;
+  --button-primary-color-hover: #5d3666;
+  --button-primary-color-active: #834c8f;
+  --button-primary-border: 1px solid #5c9506;
+
+  text-decoration: none !important;
+}
