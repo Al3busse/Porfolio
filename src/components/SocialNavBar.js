@@ -14,7 +14,7 @@ export default function SocialNavBar() {
         type='linkedin'
         size='icon'
         target='_blank'
-        href=''
+        href='https://www.linkedin.com/in/al3busse/'
       ></AwesomeButtonSocial>
       <AwesomeButtonSocial
         type='github'
