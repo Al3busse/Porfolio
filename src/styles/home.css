@@ -95,7 +95,7 @@
   --button-default-font-size: 14px;
   --button-default-border-radius: 6px;
   --button-horizontal-padding: 20px;
-  --button-raise-level: 3px;
+  --button-raise-level: 3px !important;
   --button-hover-pressure: 2;
   --transform-speed: 0.2s;
   --button-primary-color: #28182a;
