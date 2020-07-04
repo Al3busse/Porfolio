@@ -25,33 +25,32 @@ export default class App extends Component {
   render() {
     return (
       <Container id='App'>
-        <NavBar />
-        <Route
-          render={({ location }) => (
-            <TransitionGroup>
-              <CSSTransition
-                classNames='animation'
-                key={location.key}
-                timeout={{ enter: 1200, exit: 1200 }}
-              >
-                <Switch location={location}>
-                  <React.Suspense fallback={<div>Loading...</div>}>
+        <React.Suspense
+          fallback={<h1 style={{ marginTop: "10rem" }}>Loading...</h1>}
+        >
+          <NavBar />
+          <Route
+            render={({ location }) => (
+              <TransitionGroup>
+                <CSSTransition
+                  classNames='animation'
+                  key={location.key}
+                  timeout={{ enter: 1200, exit: 1200 }}
+                >
+                  <Switch location={location}>
                     <Route exact path='/' component={Home} />
-                  </React.Suspense>
-                  <React.Suspense fallback={<div>Loading...</div>}>
+
                     <Route path='/skills' component={Skills} />
-                  </React.Suspense>
-                  <React.Suspense fallback={<div>Loading...</div>}>
+
                     <Route path='/projects' component={Projects} />
-                  </React.Suspense>
-                  <React.Suspense fallback={<div>Loading...</div>}>
+
                     <Route path='/contact' component={Contact} />
-                  </React.Suspense>
-                </Switch>
-              </CSSTransition>
-            </TransitionGroup>
-          )}
-        />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            )}
+          />
+        </React.Suspense>
       </Container>
     );
   }
