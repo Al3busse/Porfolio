@@ -14,7 +14,13 @@ export default function NavBar() {
     document.body.style.overflowY = "hidden";
   }
   return (
-    <Navbar collapseOnSelect expand='sm' id='main-navbar' fixed='top'>
+    <Navbar
+      collapseOnSelect
+      expand='sm'
+      variant='dark'
+      id='main-navbar'
+      fixed='top'
+    >
       <Navbar.Brand
         id='avatar-name'
         to='/'
