@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import "../styles/navbar.scss";
+import "../styles/navbar.css";
 import avatar from "../svg/avatar.webp";
 
 export default function NavBar() {

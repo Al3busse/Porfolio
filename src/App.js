@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import Home from "./components/Home";
-import Contact from "./components/Contact";
+
 import NavBar from "./components/NavBar";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Container from "react-bootstrap/Container";
+
+const Skills = React.lazy(() => import("./components/Skills"));
+const Home = React.lazy(() => import("./components/Home"));
+const Projects = React.lazy(() => import("./components/Projects"));
+const Contact = React.lazy(() => import("./components/Contact"));
 
 export default class App extends Component {
   constructor(props) {
@@ -24,7 +26,6 @@ export default class App extends Component {
     return (
       <Container id='App'>
         <NavBar />
-
         <Route
           render={({ location }) => (
             <TransitionGroup>
@@ -33,12 +34,17 @@ export default class App extends Component {
                 key={location.key}
                 timeout={{ enter: 1200, exit: 1200 }}
               >
-                <Switch location={location}>
-                  <Route exact path='/' render={Home} />
-                  <Route path='/skills' render={Skills} />
-                  <Route path='/projects' render={Projects} />
-                  <Route path='/contact' render={Contact} />
-                </Switch>
+                <React.Suspense fallback={<div>Loading...</div>}>
+                  <Switch location={location}>
+                    <Route exact path='/' component={Home} />
+
+                    <Route path='/skills' component={Skills} />
+
+                    <Route path='/projects' component={Projects} />
+
+                    <Route path='/contact' component={Contact} />
+                  </Switch>
+                </React.Suspense>
               </CSSTransition>
             </TransitionGroup>
           )}

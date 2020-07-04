@@ -153,15 +153,12 @@ export class ParticleBGBH extends Component {
                   destroy: "min",
                   enable: true,
                   minimumValue: 0.3,
-                  speed: 3,
-                  startValue: 15,
+                  speed: 0.7,
+                  startValue: 5,
                   sync: true,
                 },
-                random: {
-                  enable: true,
-                  minimumValue: 10,
-                },
-                value: 15,
+
+                value: 5,
               },
               stroke: {
                 color: {
