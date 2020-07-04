@@ -34,17 +34,20 @@ export default class App extends Component {
                 key={location.key}
                 timeout={{ enter: 1200, exit: 1200 }}
               >
-                <React.Suspense fallback={<div>Loading...</div>}>
-                  <Switch location={location}>
+                <Switch location={location}>
+                  <React.Suspense fallback={<div>Loading...</div>}>
                     <Route exact path='/' component={Home} />
-
+                  </React.Suspense>
+                  <React.Suspense fallback={<div>Loading...</div>}>
                     <Route path='/skills' component={Skills} />
-
+                  </React.Suspense>
+                  <React.Suspense fallback={<div>Loading...</div>}>
                     <Route path='/projects' component={Projects} />
-
+                  </React.Suspense>
+                  <React.Suspense fallback={<div>Loading...</div>}>
                     <Route path='/contact' component={Contact} />
-                  </Switch>
-                </React.Suspense>
+                  </React.Suspense>
+                </Switch>
               </CSSTransition>
             </TransitionGroup>
           )}
