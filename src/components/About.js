@@ -20,14 +20,14 @@ import css3 from "../svg/css3.svg";
 import mongoose from "../svg/mongoose.png";
 import npm from "../svg/npm.svg";
 
-export default function About() {
+export default function About(props) {
   return (
     <Container id='skills' fluid>
       <ParticleBGBHW />
 
       <Row>
         <Col className='text-center'>
-          <h2 id='title-skills'> About Me </h2>
+          <h2 id='title-skills'> {this.props.lang==es?"Sobre mí":"About me"} </h2>
         </Col>
       </Row>
 
@@ -95,7 +95,7 @@ export default function About() {
         <Col>
           <Row className='justify-content-center'>
             <Col>
-              <h3 className='h3-skills'>Tools</h3>
+              <h3 className='h3-skills'>{this.props.lang==es?"Herramientas":"Tools"}</h3>
             </Col>
           </Row>
           <Row className='justify-content-center'>

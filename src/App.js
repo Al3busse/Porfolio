@@ -21,15 +21,18 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      language: "english",
+      language: "es",
       isLoading: true,
     };
+    this.switchLang=this.switchLang.bind(this)
   }
 
   componentDidMount() {
     // this simulates an async action, after which the component will render the content
     demoAsyncCall().then(() => this.setState({ isLoading: false }));
   }
+
+switchLang() {this.state.language==es?this.setState({language:"en"}):this.setState({language:"es"})}
 
   render() {
     if (this.state.isLoading) {
@@ -38,8 +41,8 @@ export default class App extends Component {
     }
     return (
       <Container id='App'>
-        <NavBar />
-        <SocialNavBar />
+        <NavBar lang={this.state.language} switchLang={this.switchLang}/>
+        <SocialNavBar lang={this.state.language} />
         <Route
           render={({ location }) => (
             <TransitionGroup>
@@ -49,13 +52,13 @@ export default class App extends Component {
                 timeout={{ enter: 1200, exit: 1200 }}
               >
                 <Switch location={location}>
-                  <Route exact path='/' component={Home} />
+                  <Route exact path='/' component={(props)=><Home {...props} lang={this.state.language} />} />
 
-                  <Route path='/about' component={About} />
+                  <Route path='/about' component={(props)=><About {...props} lang={this.state.language} />}  />
 
-                  <Route path='/projects' component={Projects} />
+                  <Route path='/projects' component={(props)=><Projects {...props} lang={this.state.language} />}  />
 
-                  <Route path='/contact' component={Contact} />
+                  <Route path='/contact' component={(props)=><Contact {...props} lang={this.state.language} />}  />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
