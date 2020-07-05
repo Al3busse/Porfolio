@@ -24,7 +24,7 @@ export default class App extends Component {
       language: "es",
       isLoading: true,
     };
-    this.switchLang=this.switchLang.bind(this)
+    this.switchLang = this.switchLang.bind(this);
   }
 
   componentDidMount() {
@@ -32,7 +32,11 @@ export default class App extends Component {
     demoAsyncCall().then(() => this.setState({ isLoading: false }));
   }
 
-switchLang() {this.state.language==es?this.setState({language:"en"}):this.setState({language:"es"})}
+  switchLang() {
+    this.state.language === "es"
+      ? this.setState({ language: "en" })
+      : this.setState({ language: "es" });
+  }
 
   render() {
     if (this.state.isLoading) {
@@ -41,7 +45,7 @@ switchLang() {this.state.language==es?this.setState({language:"en"}):this.setSta
     }
     return (
       <Container id='App'>
-        <NavBar lang={this.state.language} switchLang={this.switchLang}/>
+        <NavBar lang={this.state.language} switchLang={this.switchLang} />
         <SocialNavBar lang={this.state.language} />
         <Route
           render={({ location }) => (
@@ -52,13 +56,34 @@ switchLang() {this.state.language==es?this.setState({language:"en"}):this.setSta
                 timeout={{ enter: 1200, exit: 1200 }}
               >
                 <Switch location={location}>
-                  <Route exact path='/' component={(props)=><Home {...props} lang={this.state.language} />} />
+                  <Route
+                    exact
+                    path='/'
+                    component={(props) => (
+                      <Home {...props} lang={this.state.language} />
+                    )}
+                  />
 
-                  <Route path='/about' component={(props)=><About {...props} lang={this.state.language} />}  />
+                  <Route
+                    path='/about'
+                    component={(props) => (
+                      <About {...props} lang={this.state.language} />
+                    )}
+                  />
 
-                  <Route path='/projects' component={(props)=><Projects {...props} lang={this.state.language} />}  />
+                  <Route
+                    path='/projects'
+                    component={(props) => (
+                      <Projects {...props} lang={this.state.language} />
+                    )}
+                  />
 
-                  <Route path='/contact' component={(props)=><Contact {...props} lang={this.state.language} />}  />
+                  <Route
+                    path='/contact'
+                    component={(props) => (
+                      <Contact {...props} lang={this.state.language} />
+                    )}
+                  />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>

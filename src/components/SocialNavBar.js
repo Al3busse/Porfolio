@@ -32,8 +32,12 @@ export default function SocialNavBar() {
       <AwesomeButton
         size='icon'
         target='_blank'
-        href= {this.props.lang==es?{CVEN}:{CVEN}}
-        download={this.props.lang==es?"Alejandro Busse - EN.pdf":"Alejandro Busse - EN.pdf"}
+        href={this.props.lang === "es" ? { CVEN } : { CVEN }}
+        download={
+          this.props.lang === "es"
+            ? "Alejandro Busse - EN.pdf"
+            : "Alejandro Busse - EN.pdf"
+        }
       >
         <img
           className='icon-svg icon-cv'

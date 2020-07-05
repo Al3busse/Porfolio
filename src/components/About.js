@@ -27,7 +27,10 @@ export default function About(props) {
 
       <Row>
         <Col className='text-center'>
-          <h2 id='title-skills'> {this.props.lang==es?"Sobre mí":"About me"} </h2>
+          <h2 id='title-skills'>
+            {" "}
+            {this.props.lang === "es" ? "Sobre mí" : "About me"}{" "}
+          </h2>
         </Col>
       </Row>
 
@@ -95,7 +98,9 @@ export default function About(props) {
         <Col>
           <Row className='justify-content-center'>
             <Col>
-              <h3 className='h3-skills'>{this.props.lang==es?"Herramientas":"Tools"}</h3>
+              <h3 className='h3-skills'>
+                {this.props.lang === "es" ? "Herramientas" : "Tools"}
+              </h3>
             </Col>
           </Row>
           <Row className='justify-content-center'>

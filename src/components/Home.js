@@ -18,12 +18,25 @@ export default function Home(props) {
         <div id='repulsor'>
           <Row className='home-margin justify-content-center align-items-center h-100'>
             <Col className='text-center' sm='12'>
-              {()=> {if (this.props.lang==en) {<h2 id='home-title'>
-                Hi! I'm <span className='wrapper1'>Alejandro</span>,
-                <br /> a <span className='wrapper2'>Web Developer</span>.</h2>} else {<h2 id='home-title'> Hola! me llamo <span className='
-                 wrapper1 '>Alejandro</span>, <
-                   br/> y soy un <span className = 'wrapper2' > Desarrollador Web </span>.</h2>}}}
-              
+              {this.props.lang === "en" ? (
+                <h2 id='home-title'>
+                  Hi! I'm <span className='wrapper1'>Alejandro</span>,
+                  <br /> a <span className='wrapper2'>Web Developer</span>.
+                </h2>
+              ) : (
+                <h2 id='home-title'>
+                  {" "}
+                  Hola! me llamo{" "}
+                  <span
+                    className='
+                 wrapper1 '
+                  >
+                    Alejandro
+                  </span>
+                  , <br /> y soy un{" "}
+                  <span className='wrapper2'> Desarrollador Web </span>.
+                </h2>
+              )}
 
               <Row>
                 <Col
@@ -33,7 +46,9 @@ export default function Home(props) {
                 >
                   <Link to='/projects' href='/projects' onClick={overflowShow}>
                     <AwesomeButton id='cta'>
-                     {this.state.lang==en ? "Check out my projects!" : "Conocé mis proyectos!"}
+                      {this.state.lang === "en"
+                        ? "Check out my projects!"
+                        : "Conocé mis proyectos!"}
                     </AwesomeButton>
                   </Link>
                 </Col>

@@ -34,14 +34,22 @@ export default class MyForm extends React.Component {
           <Row className='justify-content-center'>
             <Col xs={12} sm={6} xl='3'>
               <Form.Group controlId='exampleForm.ControlInput1'>
-                <Form.Control type='text' placeholder= {this.props.lang==es?"Tu nombre":"Your name"} name='name' />
+                <Form.Control
+                  type='text'
+                  placeholder={
+                    this.props.lang === "es" ? "Tu nombre" : "Your name"
+                  }
+                  name='name'
+                />
               </Form.Group>
             </Col>
             <Col xs={12} sm={6} xl='3'>
               <Form.Group controlId='exampleForm.ControlInput2'>
                 <Form.Control
                   type='email'
-                  placeholder= {this.props.lang==es?"Tú correo":"Your mail"}
+                  placeholder={
+                    this.props.lang === "es" ? "Tú correo" : "Your mail"
+                  }
                   name='email'
                 />
               </Form.Group>
@@ -52,7 +60,7 @@ export default class MyForm extends React.Component {
               <Form.Group controlId='exampleForm.ControlInput3'>
                 <Form.Control
                   type='text'
-                  placeholder= {this.props.lang==es?"Asunto":"Subject"}
+                  placeholder={this.props.lang === "es" ? "Asunto" : "Subject"}
                   name='subject'
                 />
               </Form.Group>
@@ -65,7 +73,8 @@ export default class MyForm extends React.Component {
                   as='textarea'
                   rows='3'
                   name='message'
-                  placeholder={this.props.lang==es?"Mensaje":"Message"}                />
+                  placeholder={this.props.lang === "es" ? "Mensaje" : "Message"}
+                />
               </Form.Group>
             </Col>
           </Row>
@@ -73,7 +82,12 @@ export default class MyForm extends React.Component {
           <Row className='justify-content-center'>
             <Col className='text-right ' xl='6'>
               {status === "SUCCESS" ? (
-                <p> {this.props.lang==es?"Mensaje enviado!":"Message sent!"}</p>
+                <p>
+                  {" "}
+                  {this.props.lang === "es"
+                    ? "Mensaje enviado!"
+                    : "Message sent!"}
+                </p>
               ) : (
                 <AwesomeButton
                   className='button-all'
@@ -83,7 +97,14 @@ export default class MyForm extends React.Component {
                   Submit
                 </AwesomeButton>
               )}
-              {status === "ERROR" && <p> {this.props.lang==es?"Ocurrio un error, vuelve a intentarlo por favor.":"An error ocurred. Please try again."}</p>}
+              {status === "ERROR" && (
+                <p>
+                  {" "}
+                  {this.props.lang === "es"
+                    ? "Ocurrio un error, vuelve a intentarlo por favor."
+                    : "An error ocurred. Please try again."}
+                </p>
+              )}
             </Col>
           </Row>
         </form>

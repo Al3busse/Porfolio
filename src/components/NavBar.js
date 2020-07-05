@@ -43,7 +43,7 @@ export default function NavBar() {
       <Navbar.Collapse id='responsive-navbar-nav'>
         <Nav className='ml-auto'>
           <Nav.Link as={Link} to='/' href='/' onClick={overflowHide}>
-            {this.props.lang==es?"Inicio":"Home"}
+            {this.props.lang === "es" ? "Inicio" : "Home"}
           </Nav.Link>
           <Nav.Link
             as={Link}
@@ -52,7 +52,7 @@ export default function NavBar() {
             onClick={overflowShow}
             style={{ minWidth: "5.5rem" }}
           >
-             {this.props.lang==es?"Sobre mí":"About me"}
+            {this.props.lang === "es" ? "Sobre mí" : "About me"}
           </Nav.Link>
           <Nav.Link
             as={Link}
@@ -60,7 +60,7 @@ export default function NavBar() {
             href='/projects'
             onClick={overflowShow}
           >
-             {this.props.lang==es?"Proyectos":"Projects"}
+            {this.props.lang === "es" ? "Proyectos" : "Projects"}
           </Nav.Link>
           <Nav.Link
             as={Link}
@@ -68,13 +68,17 @@ export default function NavBar() {
             href='/contact'
             onClick={overflowShow}
           >
-             {this.props.lang==es?"Contacto":"Contact"}
+            {this.props.lang === "es" ? "Contacto" : "Contact"}
           </Nav.Link>
           <Navbar.Text style={{ textAlign: "right", paddingRight: "5px" }}>
             <button
-            onClick={this.props.switchLang}
+              onClick={this.props.switchLang}
               id='switchL'
-              title={this.props.lang==es?"Cambiar lenguaje":"Change language"}
+              title={
+                this.props.lang === "es"
+                  ? "Cambiar lenguaje"
+                  : "Change language"
+              }
               style={{
                 cursor: "pointer",
                 backgroundColor: "transparent",
