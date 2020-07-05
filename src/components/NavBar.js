@@ -5,12 +5,12 @@ import Nav from "react-bootstrap/Nav";
 import "../styles/navbar.css";
 import avatar from "../svg/avatar.webp";
 
-export default function NavBar() {
+export default function NavBar(props) {
   function overflowShow() {
     document.body.style.overflowY = "auto";
   }
 
-  function overflowHide(props) {
+  function overflowHide() {
     document.body.style.overflowY = "hidden";
   }
   return (
@@ -43,7 +43,7 @@ export default function NavBar() {
       <Navbar.Collapse id='responsive-navbar-nav'>
         <Nav className='ml-auto'>
           <Nav.Link as={Link} to='/' href='/' onClick={overflowHide}>
-            {this.props.lang === "es" ? "Inicio" : "Home"}
+            {props.lang === "es" ? "Inicio" : "Home"}
           </Nav.Link>
           <Nav.Link
             as={Link}
@@ -52,7 +52,7 @@ export default function NavBar() {
             onClick={overflowShow}
             style={{ minWidth: "5.5rem" }}
           >
-            {this.props.lang === "es" ? "Sobre mí" : "About me"}
+            {props.lang === "es" ? "Sobre mí" : "About me"}
           </Nav.Link>
           <Nav.Link
             as={Link}
@@ -60,7 +60,7 @@ export default function NavBar() {
             href='/projects'
             onClick={overflowShow}
           >
-            {this.props.lang === "es" ? "Proyectos" : "Projects"}
+            {props.lang === "es" ? "Proyectos" : "Projects"}
           </Nav.Link>
           <Nav.Link
             as={Link}
@@ -68,16 +68,14 @@ export default function NavBar() {
             href='/contact'
             onClick={overflowShow}
           >
-            {this.props.lang === "es" ? "Contacto" : "Contact"}
+            {props.lang === "es" ? "Contacto" : "Contact"}
           </Nav.Link>
           <Navbar.Text style={{ textAlign: "right", paddingRight: "5px" }}>
             <button
-              onClick={this.props.switchLang}
+              onClick={props.switchLang}
               id='switchL'
               title={
-                this.props.lang === "es"
-                  ? "Cambiar lenguaje"
-                  : "Change language"
+                props.lang === "es" ? "Cambiar lenguaje" : "Change language"
               }
               style={{
                 cursor: "pointer",
@@ -88,7 +86,11 @@ export default function NavBar() {
               }}
             >
               <img
-                src={require("../svg/switch-en.png")}
+                src={
+                  props.lang === "es"
+                    ? require("../svg/switch-es.png")
+                    : require("../svg/switch-en.png")
+                }
                 alt='switch language'
                 height='22px'
                 width='auto'

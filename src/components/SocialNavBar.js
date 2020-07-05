@@ -7,7 +7,7 @@ import CVEN from "../cv/Alejandro Busse - EN.pdf";
 
 import "../styles/socialnavbar.css";
 
-export default function SocialNavBar() {
+export default function SocialNavBar(props) {
   return (
     <Navbar fixed='bottom'>
       <AwesomeButtonSocial
@@ -32,9 +32,9 @@ export default function SocialNavBar() {
       <AwesomeButton
         size='icon'
         target='_blank'
-        href={this.props.lang === "es" ? { CVEN } : { CVEN }}
+        href={props.lang === "es" ? { CVEN } : { CVEN }}
         download={
-          this.props.lang === "es"
+          props.lang === "es"
             ? "Alejandro Busse - EN.pdf"
             : "Alejandro Busse - EN.pdf"
         }

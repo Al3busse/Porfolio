@@ -94,7 +94,7 @@ export default class MyForm extends React.Component {
                   id='submit-button'
                   type='primary'
                 >
-                  Submit
+                  {this.props.lang === "es" ? "Enviar" : "Submit"}
                 </AwesomeButton>
               )}
               {status === "ERROR" && (

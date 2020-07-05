@@ -136,7 +136,7 @@ export default function Projects(props) {
         <Col className='text-center'>
           <h2 id='title-projects'>
             {" "}
-            {this.props.lang === "es" ? "Proyectos" : "Projects"}
+            {props.lang === "es" ? "Proyectos" : "Projects"}
           </h2>
         </Col>
       </Row>
@@ -153,10 +153,10 @@ export default function Projects(props) {
               </div>
               <Card.Body>
                 <Card.Title style={{ textAlign: "center" }}>
-                  {this.props.lang === "es" ? item.nameES : item.nameEN}
+                  {props.lang === "es" ? item.nameES : item.nameEN}
                 </Card.Title>
                 <Card.Text>
-                  {this.props.lang === "es"
+                  {props.lang === "es"
                     ? item.descriptionES
                     : item.descriptionEN}
                 </Card.Text>
@@ -181,12 +181,12 @@ export default function Projects(props) {
                 <Row className='justify-content-center '>
                   <Col sm='auto' xs={{ span: 6 }} style={{ padding: "5px" }}>
                     <AwesomeButton href={item.live_demo} target='_blank'>
-                      {this.props.lang === "es" ? "Demostración" : "Live Demo"}
+                      {props.lang === "es" ? "Demostración" : "Live Demo"}
                     </AwesomeButton>
                   </Col>
                   <Col sm='auto' xs={{ span: 3 }} style={{ padding: "5px" }}>
                     <AwesomeButton href={item.code} target='_blank'>
-                      {this.props.lang === "es" ? "Código" : "Code"}
+                      {props.lang === "es" ? "Código" : "Code"}
                     </AwesomeButton>
                   </Col>
                 </Row>

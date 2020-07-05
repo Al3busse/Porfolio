@@ -18,7 +18,7 @@ export default function Home(props) {
         <div id='repulsor'>
           <Row className='home-margin justify-content-center align-items-center h-100'>
             <Col className='text-center' sm='12'>
-              {this.props.lang === "en" ? (
+              {props.lang === "en" ? (
                 <h2 id='home-title'>
                   Hi! I'm <span className='wrapper1'>Alejandro</span>,
                   <br /> a <span className='wrapper2'>Web Developer</span>.
@@ -46,7 +46,7 @@ export default function Home(props) {
                 >
                   <Link to='/projects' href='/projects' onClick={overflowShow}>
                     <AwesomeButton id='cta'>
-                      {this.state.lang === "en"
+                      {props.lang === "en"
                         ? "Check out my projects!"
                         : "Conocé mis proyectos!"}
                     </AwesomeButton>
