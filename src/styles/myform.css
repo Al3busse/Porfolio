@@ -7,6 +7,10 @@
   text-shadow: unset;
 }
 
+.form-control {
+  background: #d7d3c8 !important;
+}
+
 #submit-button:hover {
   background-color: #5d3666;
   color: #9dcb2c;
