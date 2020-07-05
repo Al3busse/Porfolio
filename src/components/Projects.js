@@ -35,7 +35,7 @@ var projects = [
     descriptionEN:
       "A scatterplot graph made with D3js that dynamically renders data gathered with an API.",
     descriptionES:
-      "Un gráfico de dispersión hecho con D3js que muestra dinámicamente la información obtenida de un API",
+      "Un gráfico de dispersión hecho con D3js que muestra dinámicamente la información obtenida de un API.",
     live_demo: "https://al3busse.github.io/d3js-Scatterplot-Graph/",
     code: "https://github.com/Al3busse/d3js-Scatterplot-Graph",
     tech_stack: [

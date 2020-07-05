@@ -4,7 +4,7 @@ import { AwesomeButtonSocial } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import Navbar from "react-bootstrap/Navbar";
 import CVEN from "../cv/Alejandro Busse - EN.pdf";
-
+import CVES from "../cv/Alejandro Busse - ES.pdf";
 import "../styles/socialnavbar.css";
 
 export default function SocialNavBar(props) {
@@ -32,10 +32,10 @@ export default function SocialNavBar(props) {
       <AwesomeButton
         size='icon'
         target='_blank'
-        href={props.lang === "es" ? { CVEN } : { CVEN }}
+        href={props.lang === "es" ? CVES : CVEN}
         download={
           props.lang === "es"
-            ? "Alejandro Busse - EN.pdf"
+            ? "Alejandro Busse - ES.pdf"
             : "Alejandro Busse - EN.pdf"
         }
       >
