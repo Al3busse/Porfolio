@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Particles from "react-particles-js";
 
 var bg = require("../svg/bg.webp");
-export class ParticleBGBH extends Component {
+export class ParticleBGBHW extends Component {
   render() {
     return (
       <Container fluid>
@@ -20,7 +20,7 @@ export class ParticleBGBH extends Component {
             backgroundMask: {
               cover: {
                 color: {
-                  value: "#D7D3C8",
+                  value: "#111",
                 },
                 opacity: 1,
               },
@@ -281,4 +281,4 @@ export class ParticleBGBH extends Component {
   }
 }
 
-export default ParticleBGBH;
+export default ParticleBGBHW;

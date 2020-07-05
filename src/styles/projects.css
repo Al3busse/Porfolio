@@ -6,6 +6,7 @@
 
 #title-projects {
   margin-bottom: 2rem;
+  font-size: 4rem;
   color: #d7d3c8;
   mix-blend-mode: difference !important;
 }
@@ -18,17 +19,15 @@
 .card-title {
   color: #28182a;
   font-weight: 1000;
+  font-size: 2rem !important;
 }
 
 .card-text {
   padding: 5px;
   text-align: justify;
-  background-color: #9dcb2c;
+
   color: #5d3666;
   font-weight: 700;
-  box-shadow: 3px solid black;
-  border: 1px solid #28182a;
-  border-radius: 3px;
 }
 
 .image-box {
@@ -67,4 +66,13 @@
   --button-primary-border: 1px solid #5c9506;
 
   text-decoration: none !important;
+}
+
+.icon-img {
+  width: 100%;
+  max-width: 3rem;
+  height: auto;
+  padding-bottom: 5px;
+  display: block;
+  margin: auto;
 }

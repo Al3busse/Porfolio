@@ -20,13 +20,16 @@
 .nav-link.active,
 .nav-link:active {
   background-color: #5d3666;
-  width: 100%;
+
   color: #9dcb2c !important;
   margin-left: auto;
 }
 
 .nav-link {
   text-align: right;
+  width: 100%;
+
+  padding-left: 8px !important;
   padding-right: 8px !important;
   color: #d7d3c8 !important;
 }

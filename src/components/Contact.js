@@ -1,6 +1,6 @@
 import React from "react";
 import MyForm from "./MyForm.js";
-import ParticleBGP from "./ParticleBGP";
+import ParticleBGBHW from "./ParticleBGBHW";
 import "../styles/contact.css";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
@@ -21,7 +21,7 @@ export default function Contact() {
         </Col>
       </Row>
       <MyForm />
-      <ParticleBGP />
+      <ParticleBGBHW />
     </Container>
   );
 }

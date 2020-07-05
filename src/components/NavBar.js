@@ -47,11 +47,12 @@ export default function NavBar() {
           </Nav.Link>
           <Nav.Link
             as={Link}
-            to='/skills'
-            href='/skills'
+            to='/about'
+            href='/about'
             onClick={overflowShow}
+            style={{ minWidth: "5.5rem" }}
           >
-            Skills
+            About Me
           </Nav.Link>
           <Nav.Link
             as={Link}

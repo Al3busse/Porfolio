@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/skills.css";
+import "../styles/about.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import ParticleBGP from "./ParticleBGP";
+import ParticleBGBHW from "./ParticleBGBHW";
 
 import bootstrap from "../svg/bootstrap.svg";
 import d3js from "../svg/d3js.svg";
@@ -20,13 +20,14 @@ import css3 from "../svg/css3.svg";
 import mongoose from "../svg/mongoose.png";
 import npm from "../svg/npm.svg";
 
-export default function Skills() {
+export default function About() {
   return (
     <Container id='skills' fluid>
-      <ParticleBGP />
+      <ParticleBGBHW />
+
       <Row>
         <Col className='text-center'>
-          <h2 id='title-skills'> Skills </h2>
+          <h2 id='title-skills'> About Me </h2>
         </Col>
       </Row>
 
