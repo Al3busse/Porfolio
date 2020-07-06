@@ -13,7 +13,7 @@ export default function Contact(props) {
         <Col className='text-center' xs='11' md='9' xl='5'>
           <h2 id='contact-title'>
             {" "}
-            {props.lang === "es" ? "Contacto" : "Contact me"}{" "}
+            {props.lang === "es" ? "Contacto" : "Contact"}{" "}
           </h2>
 
           <p id='contact-text'>
