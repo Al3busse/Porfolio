@@ -33,7 +33,7 @@ export default function Home(props) {
                   >
                     Alejandro
                   </span>
-                  , <br /> y soy un{" "}
+                  , <br /> y soy{" "}
                   <span className='wrapper2'> Desarrollador Web </span>.
                 </h2>
               )}
