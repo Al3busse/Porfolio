@@ -1,13 +1,11 @@
 #projects {
   margin-top: 5rem;
   margin-bottom: 5rem;
-  mix-blend-mode: difference !important;
 }
 
 #title-projects {
   margin-bottom: 2rem;
   font-size: 4rem;
-  mix-blend-mode: difference !important;
 }
 
 .card {
