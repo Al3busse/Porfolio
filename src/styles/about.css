@@ -10,7 +10,7 @@
 
 .responsive-img {
   width: 100%;
-  max-width: 5rem;
+  max-width: 3rem;
   height: auto;
   padding-bottom: 5px;
   display: block;
@@ -29,4 +29,18 @@
 }
 .p-skills {
   text-align: center;
+}
+
+#card-about {
+  border-radius: 5px;
+  padding: 10px;
+  background: #d7d3c8;
+  color: #28182a;
+}
+
+.h4-skills {
+  background: linear-gradient(to bottom, #5d3666 95%, #5c9506 100%);
+  width: fit-content;
+  margin: 10px auto 10px auto;
+  padding: 5px;
 }

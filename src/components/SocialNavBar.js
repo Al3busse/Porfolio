@@ -15,14 +15,22 @@ export default function SocialNavBar(props) {
         size='icon'
         target='_blank'
         href='https://www.linkedin.com/in/al3busse/'
+        title={
+          props.lang === "es" ? "Visitar mi Linkedin" : "Visit my Linkedin"
+        }
       ></AwesomeButtonSocial>
       <AwesomeButtonSocial
         type='github'
         size='icon'
         target='_blank'
         href='http://www.github.com/Al3busse'
+        title={props.lang === "es" ? "Visitar mi Github" : "Visit my Github"}
       ></AwesomeButtonSocial>
-      <AwesomeButton size='icon' href='mailto:al3busse@gmail.com'>
+      <AwesomeButton
+        size='icon'
+        href='mailto:al3busse@gmail.com'
+        title={props.lang === "es" ? "Enviar un email " : "Send email"}
+      >
         <img
           className='icon-svg'
           src={require("../svg/mail.svg")}
@@ -38,6 +46,7 @@ export default function SocialNavBar(props) {
             ? "Alejandro Busse - ES.pdf"
             : "Alejandro Busse - EN.pdf"
         }
+        title={props.lang === "es" ? "Bajar mi CV" : "Download my CV"}
       >
         <img
           className='icon-svg icon-cv'
