@@ -62,7 +62,7 @@ export default function About(props) {
                 <br />
                 Im looking for a position that allows me to use my main skill:
                 solving problems, that tests my knowledge and expands it. I
-                would like to be part of a team and grow professionally."
+                would like to be part of a team and grow professionally.
                 <br />
                 <br />
                 Some of my interests are epistemology, automatization, science
