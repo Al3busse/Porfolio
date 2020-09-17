@@ -26,7 +26,7 @@ const App = () => {
   const [language, setLanguage] = useState("es");
 
   const languageDetector = () => {
-    navigator.language.includes("en") ? setLanguage("en") : setLanguage("es");
+    navigator.language.includes("es") ? setLanguage("es") : setLanguage("en");
   };
 
   const loaderScreenHandler = () => {
