@@ -10,6 +10,7 @@ import SocialNavBar from "./components/SocialNavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Container from "react-bootstrap/Container";
+import detectBrowserLanguage from "detect-browser-language";
 
 //const Skills = React.lazy(() => import("./components/Skills"));
 //const Home = React.lazy(() => import("./components/Home"));
@@ -18,23 +19,31 @@ import Container from "react-bootstrap/Container";
 
 const App = () => {
   useEffect(() => {
-    demoAsyncCall().then(() => setLoadingStatus(false));
+    languageDetector();
+    loaderScreenHandler().then(() => setLoadingStatus(false));
   }, []);
-
-  const demoAsyncCall = () => {
-    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
-  };
 
   const [loadingStatus, setLoadingStatus] = useState(true);
   const [language, setLanguage] = useState("es");
+
+  const languageDetector = () => {
+    detectBrowserLanguage().includes("es")
+      ? setLanguage("es")
+      : setLanguage("en");
+  };
+
+  const loaderScreenHandler = () => {
+    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+  };
 
   const switchLang = () => {
     language === "es" ? setLanguage("en") : setLanguage("es");
   };
 
   return loadingStatus === true ? (
-    // if your component doesn't have to wait for an async action, remove this block
-    <h2 className='loader'>Loading</h2> // render null when app is not ready
+    <h2 className='loader'>
+      {language === "es" ? "Cargando..." : "Loading..."}
+    </h2>
   ) : (
     <Container id='App'>
       <NavBar lang={language} switchLang={switchLang} />

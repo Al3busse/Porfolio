@@ -1,6 +1,7 @@
 #main-navbar {
   padding: 0px !important;
-  background: linear-gradient(to bottom, #28182a 95%, #5c9506 100%);
+  background: linear-gradient(to bottom, #28182a 99%, #5c9506 100%);
+  border-bottom: 1px solid #5c9506;
 }
 
 @media (max-width: 450px) {

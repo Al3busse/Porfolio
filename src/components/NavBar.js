@@ -75,7 +75,7 @@ export default function NavBar(props) {
               onClick={props.switchLang}
               id='switchL'
               title={
-                props.lang === "es" ? "Cambiar lenguaje" : "Change language"
+                props.lang === "es" ? "Change language" : "Cambiar lenguaje"
               }
               style={{
                 cursor: "pointer",
@@ -88,8 +88,8 @@ export default function NavBar(props) {
               <img
                 src={
                   props.lang === "es"
-                    ? require("../svg/switch-es.png")
-                    : require("../svg/switch-en.png")
+                    ? require("../svg/switch-en.png")
+                    : require("../svg/switch-es.png")
                 }
                 alt='switch language'
                 height='22px'
