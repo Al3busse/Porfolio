@@ -10,7 +10,6 @@ import SocialNavBar from "./components/SocialNavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Container from "react-bootstrap/Container";
-import detectBrowserLanguage from "detect-browser-language";
 
 //const Skills = React.lazy(() => import("./components/Skills"));
 //const Home = React.lazy(() => import("./components/Home"));
@@ -27,9 +26,7 @@ const App = () => {
   const [language, setLanguage] = useState("es");
 
   const languageDetector = () => {
-    detectBrowserLanguage().includes("es")
-      ? setLanguage("es")
-      : setLanguage("en");
+    navigator.language.includes("en") ? setLanguage("en") : setLanguage("es");
   };
 
   const loaderScreenHandler = () => {
