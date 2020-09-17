@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import About from "./components/About";
@@ -16,84 +16,65 @@ import Container from "react-bootstrap/Container";
 //const Projects = React.lazy(() => import("./components/Projects"));
 //const Contact = React.lazy(() => import("./components/Contact"));
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
+const App = () => {
+  useEffect(() => {
+    demoAsyncCall().then(() => setLoadingStatus(false));
+  }, []);
 
-    this.state = {
-      language: "es",
-      isLoading: true,
-    };
-    this.switchLang = this.switchLang.bind(this);
-  }
+  const demoAsyncCall = () => {
+    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+  };
 
-  componentDidMount() {
-    // this simulates an async action, after which the component will render the content
-    demoAsyncCall().then(() => this.setState({ isLoading: false }));
-  }
+  const [loadingStatus, setLoadingStatus] = useState(true);
+  const [language, setLanguage] = useState("es");
 
-  switchLang() {
-    this.state.language === "es"
-      ? this.setState({ language: "en" })
-      : this.setState({ language: "es" });
-  }
+  const switchLang = () => {
+    language === "es" ? setLanguage("en") : setLanguage("es");
+  };
 
-  render() {
-    if (this.state.isLoading) {
-      // if your component doesn't have to wait for an async action, remove this block
-      return <h2 className='loader'>Loading</h2>; // render null when app is not ready
-    }
-    return (
-      <Container id='App'>
-        <NavBar lang={this.state.language} switchLang={this.switchLang} />
-        <SocialNavBar lang={this.state.language} />
-        <Route
-          render={({ location }) => (
-            <TransitionGroup>
-              <CSSTransition
-                classNames='animation'
-                key={location.key}
-                timeout={{ enter: 1200, exit: 1200 }}
-              >
-                <Switch location={location}>
-                  <Route
-                    exact
-                    path='/'
-                    component={(props) => (
-                      <Home {...props} lang={this.state.language} />
-                    )}
-                  />
+  return loadingStatus === true ? (
+    // if your component doesn't have to wait for an async action, remove this block
+    <h2 className='loader'>Loading</h2> // render null when app is not ready
+  ) : (
+    <Container id='App'>
+      <NavBar lang={language} switchLang={switchLang} />
+      <SocialNavBar lang={language} />
+      <Route
+        render={({ location }) => (
+          <TransitionGroup>
+            <CSSTransition
+              classNames='animation'
+              key={location.key}
+              timeout={{ enter: 1200, exit: 1200 }}
+            >
+              <Switch location={location}>
+                <Route
+                  exact
+                  path='/'
+                  component={(props) => <Home {...props} lang={language} />}
+                />
 
-                  <Route
-                    path='/about'
-                    component={(props) => (
-                      <About {...props} lang={this.state.language} />
-                    )}
-                  />
+                <Route
+                  path='/about'
+                  component={(props) => <About {...props} lang={language} />}
+                />
 
-                  <Route
-                    path='/projects'
-                    component={(props) => (
-                      <Projects {...props} lang={this.state.language} />
-                    )}
-                  />
+                <Route
+                  path='/projects'
+                  component={(props) => <Projects {...props} lang={language} />}
+                />
 
-                  <Route
-                    path='/contact'
-                    component={(props) => (
-                      <Contact {...props} lang={this.state.language} />
-                    )}
-                  />
-                </Switch>
-              </CSSTransition>
-            </TransitionGroup>
-          )}
-        />
-      </Container>
-    );
-  }
-}
+                <Route
+                  path='/contact'
+                  component={(props) => <Contact {...props} lang={language} />}
+                />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+        )}
+      />
+    </Container>
+  );
+};
 
-function demoAsyncCall() {
-  return new Promise((resolve) => setTimeout(() => resolve(), 2500));
-}
+export default App;
