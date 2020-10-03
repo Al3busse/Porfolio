@@ -11,6 +11,23 @@ import Masonry from "react-masonry-component";
 
 var projects = [
   {
+    nameEN: "Recipe Challenge (Back-end CRUD)",
+    nameES: "Recipe Challenge (Back-end CRUD)",
+    descriptionEN:
+      "A backend Crud Challenge using NodeJs, Graphql, TypeOrm, Apollo, Typescript, JWT and PostgreSQL.",
+    descriptionES:
+      "Un backend Crud Challenge usando NodeJs, Graphql, TypeOrm, Apollo, Typescript, JWT and PostgreSQL.",
+    live_demo: "https://puzzle-recipe-challenge.herokuapp.com/graphql",
+    code: "https://github.com/Al3busse/puzzle-recipe-challenge",
+    tech_stack: [
+      "Nodejs-icon.svg",
+      "graphQL-icon.png",
+      "typescript-icon.svg",
+      "postgresql-icon.svg",
+    ],
+    screenshot: require("../sc/recipe-challenge.webp"),
+  },
+  {
     nameEN: "Pomodoro Clock",
     nameES: "Reloj Pomodoro",
     descriptionEN:

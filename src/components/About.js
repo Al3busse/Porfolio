@@ -19,6 +19,10 @@ import html5 from "../svg/html5.svg";
 import css3 from "../svg/css3.svg";
 import mongoose from "../svg/mongoose.png";
 import npm from "../svg/npm.svg";
+import postman from "../svg/postman.png";
+import typescript from "../svg/typescript.svg";
+import postgreSQL from "../svg/postgresql.svg";
+import graphql from "../svg/graphQL.png";
 
 export default function About(props) {
   return (
@@ -71,7 +75,6 @@ export default function About(props) {
               </p>
             )}
           </Col>
-
           <Col xs='12' md='8'>
             <Row className='justify-content-center'>
               <Col>
@@ -87,7 +90,22 @@ export default function About(props) {
                 <img src={css3} alt='css3' className='responsive-img' />
                 <p className='p-skills'>CSS3</p>
               </Col>
-
+              <Col xs='3' sm='auto' className='text-center'>
+                <img
+                  src={javascript}
+                  alt='javascript'
+                  className='responsive-img'
+                />
+                <p className='p-skills'>Javascript</p>
+              </Col>
+              <Col xs='3' sm='auto' className='text-center'>
+                <img
+                  src={typescript}
+                  alt='typescript'
+                  className='responsive-img'
+                />
+                <p className='p-skills'>Typescript</p>
+              </Col>
               <Col xs='3' sm='auto'>
                 <img src={sass} alt='sass' className='responsive-img' />{" "}
                 <p className='p-skills'>Sass</p>
@@ -100,14 +118,6 @@ export default function About(props) {
                 <img src={react} alt='react' className='responsive-img' />
                 <p className='p-skills'>React</p>
               </Col>
-              <Col xs='3' sm='auto' className='text-center'>
-                <img
-                  src={javascript}
-                  alt='javascript'
-                  className='responsive-img'
-                />
-                <p className='p-skills'>Javascript</p>
-              </Col>
               <Col xs='3' sm='auto'>
                 <img
                   src={bootstrap}
@@ -117,30 +127,57 @@ export default function About(props) {
                 <p className='p-skills'>Bootstrap</p>
               </Col>
             </Row>
-
             <Row className='justify-content-center'>
               <Col>
                 <h4 className='h4-skills'>Back-End</h4>
                 <Row className='justify-content-center'>
                   <Col xs='3' sm='auto'>
-                    <img src={nodejs} alt='react' className='responsive-img' />
+                    <img
+                      src={nodejs}
+                      alt='Node.js'
+                      className='responsive-img'
+                    />
                     <p className='p-skills'>Node.js</p>
                   </Col>
                   <Col xs='3' sm='auto'>
-                    <img src={express} alt='react' className='responsive-img' />
+                    <img
+                      src={express}
+                      alt='Express'
+                      className='responsive-img'
+                    />
                     <p className='p-skills'> Express</p>
-                  </Col>
-                  <Col xs='3' sm='auto'>
-                    <img src={mongodb} alt='react' className='responsive-img' />
-                    <p className='p-skills'> MongoDB</p>
                   </Col>
                   <Col xs='3' sm='auto'>
                     <img
                       src={mongoose}
-                      alt='react'
+                      alt='Mongoose'
                       className='responsive-img'
                     />
                     <p className='p-skills'> Mongoose</p>
+                  </Col>
+                  <Col xs='3' sm='auto'>
+                    <img
+                      src={mongodb}
+                      alt='MongoDB'
+                      className='responsive-img'
+                    />
+                    <p className='p-skills'> MongoDB</p>
+                  </Col>
+                  <Col xs='3' sm='auto'>
+                    <img
+                      src={postgreSQL}
+                      alt='PostgreSQL'
+                      className='responsive-img'
+                    />
+                    <p className='p-skills'> PostgreSQL</p>
+                  </Col>
+                  <Col xs='3' sm='auto'>
+                    <img
+                      src={graphql}
+                      alt='graphQL'
+                      className='responsive-img'
+                    />
+                    <p className='p-skills'> graphQL</p>
                   </Col>
                 </Row>
               </Col>
@@ -156,16 +193,24 @@ export default function About(props) {
                 </Row>
                 <Row className='justify-content-center'>
                   <Col xs='3' sm='auto'>
-                    <img src={git} alt='react' className='responsive-img' />
+                    <img src={git} alt='Git' className='responsive-img' />
                     <p className='p-skills'> Git</p>
                   </Col>
                   <Col xs='3' sm='auto'>
-                    <img src={github} alt='react' className='responsive-img' />{" "}
+                    <img src={github} alt='Github' className='responsive-img' />{" "}
                     <p className='p-skills'>Github</p>
                   </Col>
                   <Col xs='3' sm='auto'>
-                    <img src={npm} alt='react' className='responsive-img' />
+                    <img src={npm} alt='NPM' className='responsive-img' />
                     <p className='p-skills'>NPM</p>
+                  </Col>
+                  <Col xs='3' sm='auto'>
+                    <img
+                      src={postman}
+                      alt='Postman'
+                      className='responsive-img'
+                    />
+                    <p className='p-skills'>Postman</p>
                   </Col>
                 </Row>
               </Col>
