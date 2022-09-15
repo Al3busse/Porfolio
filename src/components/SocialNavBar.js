@@ -6,6 +6,8 @@ import Navbar from "react-bootstrap/Navbar";
 import CVEN from "../cv/Alejandro Busse - EN.pdf";
 import CVES from "../cv/Alejandro Busse - ES.pdf";
 import "../styles/socialnavbar.css";
+import  cvsvg from "../svg/cv.svg";
+import  mailsvg from "../svg/mail.svg";
 
 export default function SocialNavBar(props) {
   return (
@@ -33,7 +35,7 @@ export default function SocialNavBar(props) {
       >
         <img
           className='icon-svg'
-          src={require("../svg/mail.svg")}
+          src={mailsvg}
           alt='send mail'
         ></img>
       </AwesomeButton>
@@ -50,7 +52,7 @@ export default function SocialNavBar(props) {
       >
         <img
           className='icon-svg icon-cv'
-          src={require("../svg/cv.svg")}
+          src={cvsvg}
           alt='download cv'
         ></img>
       </AwesomeButton>
